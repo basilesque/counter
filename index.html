@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Roboto:ital,wght@0,300;1,100;1,300&family=Tektur:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Tektur', cursive;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #071933;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            /* background-color: rgb(71, 119, 83); */
+            background: linear-gradient(#72fa84, #a56af1);
+        }
+
+        section {
+
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+
+        }
+
+
+        #button-container {
+            position: relative;
+            top: 30%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: center;
+        }
+
+        #counter-el {
+            position: relative;
+            top: 30%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+            font-size: 55px;
+        }
+
+        #number-el {
+            position: relative;
+            top: 30%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+            font-size: 65px;
+        }
+
+        #saved-numbers-el {
+            position: relative;
+            top: 30%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        button {
+            margin: 1em;
+            padding: 0.5em 1em;
+            font-size: 15px;
+            font-weight: 500;
+            /* border-radius: 1em; */
+            border: 2px solid #000000;
+            border-style: inset;
+            background: #5dc77454;
+           
+        }
+
+        button:hover {
+            box-shadow: 0 0.5em 0.5em -0.4em black;
+            transform: translateY(-0.04em);
+            cursor: pointer;
+        }
+
+        button:active {
+            transform: translateY(0.04em);
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div id="counter-el">
+            <p>COUNTER</p>
+        </div>
+        <p id="number-el">0</p>
+        <div id="button-container">
+            <p>
+                <button id="reset-btn" type="button" onclick="reset()">RESET</button>
+                <button id="decrease-btn" type="button" onclick="decrease()">DECREASE</button>
+                <button id="increase-btn" type="button" onclick="increase()">INCREASE</button>
+                <button id="save-btn" type="button" onclick="save()">SAVE</button>
+            </p>
+        </div>
+        <p id="saved-numbers-el">SAVED: <span id="saved-span"></span></p>
+    </section>
+
+
+    <script>
+        let number = document.getElementById("number-el");
+
+        // let savedNumbers = []
+
+        function reset() {
+            number.textContent = 0
+        };
+        function decrease() {
+            if (number.textContent > 0) {
+                number.textContent--
+            }
+        };
+
+        function increase() {
+            number.textContent++
+        };
+
+        function save() {
+            if (number.textContent > 0) {
+                // let newNumber = number.textContent
+                // savedNumbers.push(newNumber)
+                // for (let i = 0; i < savedNumbers.length; i++) {
+                //     document.getElementById("saved-span").textContent += savedNumbers[i] + ", "
+                // }
+                // number.textContent = 0
+                // savedNumbers.shift()
+                let newNumber = number.textContent;
+                document.getElementById("saved-span").textContent += newNumber + ", ";
+                number.textContent = 0;
+            }
+        };
+
+
+    </script>
+
+</body>
+
+</html>
