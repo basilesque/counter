@@ -1,0 +1,88 @@
+* {
+    font-family: 'Tektur', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #071933;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    /* background-color: rgb(71, 119, 83); */
+    background: linear-gradient(#72fa84, #a56af1);
+}
+
+section {
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+
+#button-container {
+    position: relative;
+    top: 30%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-content: space-evenly;
+}
+
+#counter-el {
+    position: relative;
+    top: 30%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+#number-el {
+    position: relative;
+    top: 30%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 3em;
+}
+
+#saved-numbers-el {
+    position: relative;
+    top: 30%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+}
+
+button {
+    margin: 1em;
+    padding: 0.5em 1em;
+    font-size: 0.7em;
+    font-weight: 500;
+    /* border-radius: 1em; */
+    border: 2px solid #000000;
+    border-style: inset;
+    background: #5dc77454;
+    border-radius: 3px;
+}
+
+
+button:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em black;
+    transform: translateY(-0.04em);
+    cursor: pointer;
+}
+
+button:active {
+    transform: translateY(0.04em);
+    transform: scale(0.97);
+}
